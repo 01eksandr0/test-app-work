@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <include src="./layout/html-top.html" locals='{
+        "title": "Homepage"
+    }'></include>
+
+  <body>
+    <div id="site">
+      <include src="./html/popups/popup.html"></include>
+      <include src="./layout/header.html"></include>
+
+      <main class="main" id="content">
+        <div class="relative flex h-screen w-full flex-col overflow-hidden">
+          <dotlottie-player autoplay="" loop="" mode="normal" src="./assets/lottie/animation.lottie" class="pointer-events-none absolute inset-x-0 -bottom-24 z-10 h-full w-full">
+          </dotlottie-player>
+          <span class="absolute z-10 h-full w-full bg-gray-950/40"></span>
+          <noscript class="loading-lazy">
+            <picture>
+              <source srcset="/astro.407b2436.webp" type="image/webp">
+              <img class="absolute inset-0 h-full w-full object-cover object-center" src="/astro.13357c54.jpeg" loading="lazy" alt="">
+            </picture>
+          </noscript>
+          <div class="cont relative z-20 flex grow flex-col items-center justify-center gap-5 text-center">
+            <h1 class="text-9xl font-bold text-white" data-aos="fade-up">
+              Utopia
+            </h1>
+            <span class="hidden">
+              <h2 class="count-up text-4xl text-white" data-aos="fade-up" data-separator=",">
+                3000
+              </h2>
+              <button onclick="pushPopup('#popup-apply-now', '');" class="rounded-lg bg-red-500 px-4 py-2 text-white transition-all duration-300 ease-in-out hover:bg-red-600 hover:text-gray-100">
+                Open Popup
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="h-[300vh]"></div>
+
+        <div class="mx-auto w-1/2">
+          <noscript class="loading-lazy">
+            <picture>
+              <source srcset="/RUG_1500x.8820e2c1.webp" type="image/webp">
+              <img class="h-full w-full object-cover object-center" src="/RUG_1500x.1bd611df.jpeg" width="1200" height="1200" loading="lazy" alt="">
+            </picture>
+          </noscript>
+        </div>
+      </main>
+
+      <include src="./layout/footer.html"></include>
+    </div>
+
+    <include src="./layout/links/scripts.html"></include>
+    <include src="./html/popups/popup-content.html"></include>
+  <script src="/test-app-work.59712999.js"></script></body>
+</html>

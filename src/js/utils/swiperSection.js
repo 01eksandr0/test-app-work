@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Scrollbar } from 'swiper';
+import { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import sprite from '../../assets/images/icons/symbol-defs.svg';
 import cart1 from '../../assets/images/swiper/cart2.jpg';
@@ -7,7 +7,6 @@ import cart2 from '../../assets/images/swiper/cart3.jpg';
 import cart3 from '../../assets/images/swiper/cart4.jpg';
 import back from '../../assets/images/swiper/ingBack.png';
 
-Swiper.use([Scrollbar]);
 function createSwiper() {
   const container = document.querySelector('.swiper_second');
 
@@ -54,32 +53,14 @@ function createSwiper() {
 
   container.insertAdjacentHTML('afterbegin', list);
 
-  setTimeout(() => {
-    new Swiper('.swiper_swiper', {
-      loop: true,
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 20,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-      },
-      modules: [Navigation],
-      navigation: {
-        nextEl: '.swiper_btn_next',
-        prevEl: '.swiper_btn_prew',
-      },
-      on: {
-        slideChange: function () {
-          document.querySelectorAll('.swiper-slide').forEach((slide) => {
-            slide.classList.remove('active');
-          });
-
-          this.slides[this.activeIndex].classList.add('active');
-        },
-      },
-    });
-  }, 1000);
+  new Swiper('.swiper_swiper', {
+    loop: true,
+    modules: [Navigation],
+    navigation: {
+      nextEl: '.swiper_btn_next',
+      prevEl: '.swiper_btn_prew',
+    },
+  });
 }
 
 document.addEventListener('DOMContentLoaded', createSwiper);

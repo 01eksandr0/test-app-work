@@ -1136,6 +1136,10 @@ section {
   }
 }
 
+.asasas {
+  color: red;
+}
+
 :root {
   --pp-main: #707070;
   --pp-main-rgb: 112 112 112;

@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <include src="./layout/html-top.html" locals='{
-        "title": "Terms and Condition"
-    }'></include>
+  <head><link rel="stylesheet" href="/css/styles.ddc640d3.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <title>Terms and Condition</title>
+
+  <link href="/css/styles.843dac01.css" type="text/css" rel="stylesheet">
+
+<link href="/css/styles.a26d194b.css" type="text/css" rel="stylesheet">
+
+<link href="/css/styles.e4fe41f8.css" type="text/css" rel="stylesheet">
+
+<link href="/css/styles.cdb6d128.css" type="text/css" rel="stylesheet">
+
+<link href="/css/styles.9aa4379f.css" type="text/css" rel="stylesheet">
+
+<link href="/css/styles.c68e93a6.css" data-remove-for-sd="true" type="text/css" rel="stylesheet">
+
+</head>
+
   <body>
     <div class="cookie-terms-page" id="site">
       <!-- todo for backend dev #site must have .cookie-terms-page class for cookie, terms, policy pages -->
-      <include src="./html/popups/popup.html"></include>
-      <include src="./layout/header.html"></include>
+      <div id="popup" class="popup">
+  <div id="popup-close-bg" class="popup__close-bg" onclick="closePopup()"></div>
+  <div id="popup-block" class="popup__block">
+    <!-- old-popup-styles, pos-t, pos-r, pos-b, pos-l, full-height -->
+    <!-- slide-t, slide-r, slide-b, slide-l -->
+  </div>
+</div>
+
+      <header class="header">
+  <div class="header_container container">
+    <a href="/"><img class="header_logo" src="/img/logo.png" alt="Logo"></a>
+    <ul class="header_list">
+      <li class="header_list_item">
+        <button class="header_btn" type="button">CONTACT US</button>
+      </li>
+      <li class="header_list_item">
+        <button class="header_btn" type="button">SUBMIT CV</button>
+      </li>
+      <li>
+        <button class="header_btn_menu" type="button" onclick="
+    const btn = document.querySelector('.mobail_menu')
+    btn.classList.add('open-menu')
+        ">
+          <svg width="24" height="18">
+            <use href="/img/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+
 
       <main class="main" id="content">
         <section class="cookie-terms-section">
@@ -330,9 +378,73 @@
         </section>
       </main>
 
-      <include src="./layout/footer.html"></include>
+      <footer class="footer">
+  <div class="cont">
+    <a href="/index.html" class="logo">
+      <img src="/img/logo.svg" alt="">
+    </a>
+    <navbar class="navbar">
+      <a href="">About Us</a>
+      <a href="">Job Board</a>
+      <a href="">Insights Hub</a>
+      <a href="">Meet the team</a>
+      <a href="">Contact Us</a>
+    </navbar>
+    <div class="bottom-info">
+      <p>© 2023 BOLD Agency</p>
+
+      <navbar class="navbar">
+        <a href="">Terms</a>
+        <a href="">Cookies</a>
+        <a href="">Privacy policy</a>
+      </navbar>
     </div>
 
-    <include src="./layout/links/scripts.html"></include>
-  <script src="/terms.f0c55da2.js"></script></body>
+    <a href="https://www.boldidentities.com/" target="_blank" id="bold-credits"></a>
+  </div>
+</footer>
+
+    </div>
+
+    <script src="/js/scripts.e188dbe1.js"></script>
+<script src="/js/scripts.84cad93f.js"></script>
+<script src="/js/scripts.9c64cd38.js"></script>
+
+<!-- Container Query Polyfill -->
+<!--<script src="npm:cq-prolyfill"></script>-->
+
+<!-- DotLottie CDN Link -->
+<script src="https://cdn.jsdelivr.net/npm/@dotlottie/player-component@1.4.2/dist/dotlottie-player.min.js"></script>
+
+<script src="/js/scripts.18dbc454.js" defer=""></script>
+
+<script data-remove-for-sd="true">var popupFD = document.querySelector("#popup");
+if (popupFD) {
+    /*var popupTitle = popupFD.querySelector(".popup__title");*/ var popupBlock = popupFD.querySelector("#popup-block");
+    window.pushPopup = function pushPopup(parentBlock, classHelper = "") {
+        if (classHelper) {
+            const cls = classHelper.split(" ");
+            popupBlock.classList.add(...cls);
+        }
+        popupBlock.innerHTML = "";
+        popupBlock.innerHTML = document.querySelector(parentBlock).innerHTML;
+        popupFD.classList.add("active");
+        scrollLock.disablePageScroll(document.querySelector(".navbar-nav .menu"));
+        scrollLock.addScrollableSelector(".simplebar-content-wrapper");
+        var scrollContentElement = document.querySelector(".popup__content");
+        if (scrollContentElement) {
+            var simpleBarInstance = new SimpleBar(scrollContentElement);
+            simpleBarInstance.recalculate();
+        }
+    };
+}
+function closePopup() {
+    document.querySelector("#popup").classList.remove("active");
+    scrollLock.clearQueueScrollLocks();
+    scrollLock.enablePageScroll();
+}
+
+</script>
+
+  </body>
 </html>

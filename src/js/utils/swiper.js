@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
-import { Navigation, Scrollbar } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import sprite from '../assets/images/icons/symbol-defs.svg';
-import cart1 from '../assets/images/swiper/cart2.jpg';
-import cart2 from '../assets/images/swiper/cart3.jpg';
-import cart3 from '../assets/images/swiper/cart4.jpg';
-import back from '../assets/images/swiper/ingBack.png';
+import sprite from '../../assets/images/icons/symbol-defs.svg';
+import cart1 from '../../assets/images/swiper/cart2.jpg';
+import cart2 from '../../assets/images/swiper/cart3.jpg';
+import cart3 from '../../assets/images/swiper/cart4.jpg';
+import back from '../../assets/images/swiper/ingBack.png';
 Swiper.use([Scrollbar]);
 function createSwiper() {
   const block = document.querySelector('.swiper_second');

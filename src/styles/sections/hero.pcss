@@ -1,0 +1,136 @@
+.hero {
+  height: 688px;
+  width: 375px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.hero_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding-bottom: 32px;
+  gap: 24px;
+}
+.hero_slide_first .hero_slide_second {
+  height: 688px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero_slide_first {
+  background-image: url(../../assets/images/hero/first.jpg);
+}
+.hero_slide_second {
+  background-image: url(../../assets/images/hero/second.jpg);
+}
+.hero_title {
+  color: rgb(255, 255, 255);
+  font-family: New Order;
+  font-size: 36px;
+  font-weight: 600;
+  width: 326px;
+  text-align: left;
+}
+.hero_title_part {
+  font-size: 44px;
+  font-weight: 400;
+}
+.hero_subtitle {
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+}
+.hero_list_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-direction: column;
+}
+.hero_btn_first,
+.hero_btn_second {
+  width: 326px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+}
+.hero_btn_second {
+  border-color: #db509b;
+  color: #db509b;
+  background-color: #fff;
+}
+.hero_list_control {
+  display: flex;
+  gap: 12px;
+}
+.hero_control_btn {
+  height: 48px;
+  width: 48px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+@media screen and (min-width: 1440px) {
+  .hero {
+    width: 1440px;
+    height: 780px;
+  }
+  .hero_slide_first {
+    background-image: url(../../assets/images/hero/firstDesk.jpg);
+  }
+  .hero_slide_second {
+    background-image: url(../../assets/images/hero/secondDesk.jpg);
+  }
+  .hero_container {
+    padding-bottom: 90px;
+    gap: 4px;
+    align-items: start;
+  }
+  .hero_title {
+    font-size: 64px;
+    width: 638px;
+    margin-bottom: 24px;
+  }
+  .hero_title_part {
+    font-size: 72px;
+  }
+  .hero_subtitle {
+    font-size: 28px;
+    margin-bottom: 48px;
+    width: 638px;
+  }
+  .hero_list_button {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .hero_btn_first,
+  .hero_btn_second {
+    width: auto;
+    padding: 0 32px;
+  }
+  .hero_list_control {
+    gap: 16px;
+  }
+  .hero_control_btn {
+    height: 64px;
+    width: 64px;
+    & > svg {
+      width: 21px;
+      height: 16px;
+    }
+  }
+  .hero_list_control {
+    margin-left: auto;
+  }
+}

@@ -9,7 +9,7 @@ import back from '../../assets/images/swiper/ingBack.png';
 
 Swiper.use([Scrollbar]);
 function createSwiper() {
-  const block = document.querySelector('.swiper_second');
+  const container = document.querySelector('.swiper_second');
 
   const images = [cart1, cart2, cart3, cart1, cart2, cart3];
 
@@ -52,32 +52,34 @@ function createSwiper() {
     );
   }, '');
 
-  block.insertAdjacentHTML('afterbegin', list);
+  container.insertAdjacentHTML('afterbegin', list);
 
-  new Swiper('.swiper_swiper', {
-    loop: true,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    spaceBetween: 20,
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-    },
-    modules: [Navigation],
-    navigation: {
-      nextEl: '.swiper_btn_next',
-      prevEl: '.swiper_btn_prew',
-    },
-    on: {
-      slideChange: function () {
-        document.querySelectorAll('.swiper-slide').forEach((slide) => {
-          slide.classList.remove('active');
-        });
-
-        this.slides[this.activeIndex].classList.add('active');
+  setTimeout(() => {
+    new Swiper('.swiper_swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 20,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
       },
-    },
-  });
+      modules: [Navigation],
+      navigation: {
+        nextEl: '.swiper_btn_next',
+        prevEl: '.swiper_btn_prew',
+      },
+      on: {
+        slideChange: function () {
+          document.querySelectorAll('.swiper-slide').forEach((slide) => {
+            slide.classList.remove('active');
+          });
+
+          this.slides[this.activeIndex].classList.add('active');
+        },
+      },
+    });
+  }, 1000);
 }
 
 document.addEventListener('DOMContentLoaded', createSwiper);

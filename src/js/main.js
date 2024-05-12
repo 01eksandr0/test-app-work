@@ -6,6 +6,6 @@ import './components/inputs.component.js';
 
 import './libs/countUp.lib.js';
 
-// import './utils/hero.js';
+import './utils/hero.js';
 
 import './utils/swiperSection.js';

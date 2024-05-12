@@ -3,7 +3,7 @@ import { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.hero', {
+  new Swiper('.hero', {
     loop: true,
     modules: [Navigation],
     navigation: {

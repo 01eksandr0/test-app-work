@@ -11,7 +11,7 @@ body {
   position: relative;
   min-width: 320px;
   margin: auto;
-  background: var(--cl-black);
+  background: #fff;
 
   color: var(--cl-black);
   font-family: var(--font-main);
@@ -163,5 +163,20 @@ section {
   a {
     display: inline-block;
     margin-top: 20px;
+  }
+}
+.container {
+  padding: 0 24px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 82px;
   }
 }

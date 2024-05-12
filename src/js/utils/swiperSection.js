@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper';
+import { Navigation, Scrollbar } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import sprite from '../../assets/images/icons/symbol-defs.svg';
 import cart1 from '../../assets/images/swiper/cart2.jpg';
@@ -7,6 +7,18 @@ import cart2 from '../../assets/images/swiper/cart3.jpg';
 import cart3 from '../../assets/images/swiper/cart4.jpg';
 import back from '../../assets/images/swiper/ingBack.png';
 
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.hero', {
+    loop: true,
+    modules: [Navigation],
+    navigation: {
+      nextEl: '.hero_btn_next',
+      prevEl: '.hero_btn_prew',
+    },
+  });
+});
+
+Swiper.use([Scrollbar]);
 function createSwiper() {
   const block = document.querySelector('.swiper_second');
 
@@ -51,7 +63,7 @@ function createSwiper() {
     );
   }, '');
 
-  block.insertAdjacentHTML('beforeend', list);
+  block.insertAdjacentHTML('afterbegin', list);
 
   new Swiper('.swiper_swiper', {
     loop: true,
@@ -72,6 +84,7 @@ function createSwiper() {
         document.querySelectorAll('.swiper-slide').forEach((slide) => {
           slide.classList.remove('active');
         });
+
         this.slides[this.activeIndex].classList.add('active');
       },
     },

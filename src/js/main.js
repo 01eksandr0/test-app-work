@@ -8,4 +8,4 @@ import './libs/countUp.lib.js';
 
 import './utils/hero.js';
 
-import './utils/swiper.js';
+import './utils/swiperSection.js';

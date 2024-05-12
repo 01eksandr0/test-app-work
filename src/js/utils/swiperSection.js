@@ -51,9 +51,9 @@ function createSwiper() {
     );
   }, '');
 
-  block.insertAdjacentHTML('afterbegin', list);
+  block.insertAdjacentHTML('beforeend', list);
 
-  const swiper = new Swiper('.swiper_swiper', {
+  new Swiper('.swiper_swiper', {
     loop: true,
     slidesPerView: 'auto',
     centeredSlides: true,
@@ -72,7 +72,6 @@ function createSwiper() {
         document.querySelectorAll('.swiper-slide').forEach((slide) => {
           slide.classList.remove('active');
         });
-
         this.slides[this.activeIndex].classList.add('active');
       },
     },

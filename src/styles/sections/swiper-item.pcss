@@ -1,0 +1,119 @@
+.swiper_item {
+  width: 327px;
+  height: 580px;
+  background-color: #8000b3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.swiper_item_img_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.swiper_item_content {
+  padding: 24px;
+}
+.swiper_item_title {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.swiper_item_text {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.swiper_item_link {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+.swiper_item_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-left: 4px;
+  & > svg {
+    fill: #fff;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .swiper_item {
+    height: 450px;
+    width: 369px;
+    margin-right: 32px;
+    background-color: #fff;
+    .swiper_item_img {
+      width: 369px;
+      height: 275px;
+    }
+    .swiper_item_img_back {
+      display: none;
+    }
+    .swiper_item_title {
+      color: #560b75;
+    }
+    .swiper_item_link {
+      color: #560b75;
+    }
+    .swiper_item_text {
+      display: none;
+    }
+    .swiper_item_btn {
+      color: #c82a7a;
+      border-color: #c82a7a;
+      & > svg {
+        fill: #c82a7a;
+      }
+    }
+  }
+  .active {
+    background-color: #8000b3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    height: 580px;
+    .swiper_item_img_back {
+      display: block;
+      width: 369px;
+      height: 275px;
+    }
+    .swiper_item_content {
+      padding: 24px;
+    }
+    .swiper_item_title {
+      font-size: 26px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .swiper_item_text {
+      display: block;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .swiper_item_link {
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
+    .swiper_item_btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 32px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      margin-left: 4px;
+      & > svg {
+        fill: #fff;
+      }
+    }
+  }
+}

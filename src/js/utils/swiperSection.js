@@ -7,21 +7,11 @@ import cart2 from '../../assets/images/swiper/cart3.jpg';
 import cart3 from '../../assets/images/swiper/cart4.jpg';
 import back from '../../assets/images/swiper/ingBack.png';
 
-document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('.hero', {
-    loop: true,
-    modules: [Navigation],
-    navigation: {
-      nextEl: '.hero_btn_next',
-      prevEl: '.hero_btn_prew',
-    },
-  });
-});
-
 Swiper.use([Scrollbar]);
-function createSwiper() {
-  const block = document.querySelector('.swiper_second');
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Swiper for ".swiper_second" block
+  const block = document.querySelector('.swiper_second');
   const images = [cart1, cart2, cart3, cart1, cart2, cart3];
 
   const list = images.reduce((html, item) => {
@@ -89,6 +79,14 @@ function createSwiper() {
       },
     },
   });
-}
 
-document.addEventListener('DOMContentLoaded', createSwiper);
+  // Initialize Swiper for ".hero" block
+  new Swiper('.hero', {
+    loop: true,
+    modules: [Navigation],
+    navigation: {
+      nextEl: '.hero_btn_next',
+      prevEl: '.hero_btn_prew',
+    },
+  });
+});

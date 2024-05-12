@@ -1,6 +1,6 @@
 dist/
 .vscode/
-
+dist
 .DS_Store
 #update/*.sql
 #!tables.sql

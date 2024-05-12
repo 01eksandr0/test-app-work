@@ -1,10 +1,8 @@
 import './utils/vh.utils.js';
-import './utils/animate-on-view.utils';
+import './utils/animate-on-view.utils'
 
 import './components/uploadFile.component.js';
 import './components/inputs.component.js';
 
 import './libs/countUp.lib.js';
 
-import './hero.js';
-import './swiper.js';

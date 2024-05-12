@@ -1,29 +1,49 @@
-<header class="header">
-  <div class="header_container container">
-    <a href="/"
-      ><img class="header_logo" src="./assets/images/logo.png" alt="Logo"
-    /></a>
-    <ul class="header_list">
-      <li class="header_list_item">
-        <button class="header_btn" type="button">CONTACT US</button>
-      </li>
-      <li class="header_list_item">
-        <button class="header_btn" type="button">SUBMIT CV</button>
-      </li>
-      <li>
-        <button
-          class="header_btn_menu"
-          type="button"
-          onclick="
-    const btn = document.querySelector('.mobail_menu')
-    btn.classList.add('open-menu')
-        "
-        >
-          <svg width="24" height="18">
-            <use href="./assets/images/icons/symbol-defs.svg#icon-menu"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
+<header class="header fixed">
+  <div class="cont">
+    <div class="navbar">
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.svg" alt="" />
+      </a>
+
+      <nav class="navbar-nav nav-slide-right">
+        <ul class="menu">
+          <li class="menu-item">
+            <a class="menu-link" href="./index.html">Home</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="/">About Us</a>
+          </li>
+          <li class="menu-item dropdown">
+            <a class="menu-link dropdown-toggle" href="/">Job Board</a>
+            <ul class="dropdown-menu">
+              <li><a class="menu-link" href="/">engineering</a></li>
+              <li><a class="menu-link" href="/">software & it</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="/">Insights Hub</a>
+          </li>
+          <li class="menu-item dropdown">
+            <a class="menu-link dropdown-toggle" href="/">Meet the team</a>
+            <ul class="dropdown-menu">
+              <li><a class="menu-link" href="/">engineering</a></li>
+              <li><a class="menu-link" href="/">software & it</a></li>
+              <li><a class="menu-link" href="/">engineering</a></li>
+              <li><a class="menu-link" href="/">software & it</a></li>
+              <li><a class="menu-link" href="/">engineering</a></li>
+              <li><a class="menu-link" href="/">software & it</a></li>
+              <li><a class="menu-link" href="/">engineering</a></li>
+              <li><a class="menu-link" href="/">software & it</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger menu-toggle">
+        <span></span>
+
+      </div>
+    </div>
   </div>
 </header>
+
+<div class="header-close-wrapper"></div>

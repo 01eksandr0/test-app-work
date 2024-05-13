@@ -535,6 +535,13 @@ section {
     line-height: 19px;
     letter-spacing: 8%;
   }
+  .header_btn, .header_btn_menu {
+    transition: all 300ms linear;
+  }
+    .header_btn:hover, .header_btn:focus, .header_btn_menu:hover, .header_btn_menu:focus {
+      background-color: #db509b;
+      color: #fff;
+    }
   .header_btn_menu {
     margin-left: 24px;
   }
@@ -1276,8 +1283,7 @@ section {
 
 .hero {
   height: 688px;
-  width: 375px;
-  margin: 0 auto;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -1287,23 +1293,33 @@ section {
   flex-direction: column;
   justify-content: end;
   height: 100%;
+  width: 100vw;
   padding-bottom: 32px;
   gap: 24px;
 }
 
 .hero_slide_first .hero_slide_second {
   height: 688px;
-  width: 100%;
-  background-position: center;
+  width: 100vw;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero_slide_first {
-  background-image: url(../../assets/images/hero/first.jpg);
+  background-image: url(../../assets/images/hero/firstDesk.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
 }
 
 .hero_slide_second {
   background-image: url(../../assets/images/hero/second.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
 }
 
 .hero_title {
@@ -1347,11 +1363,27 @@ section {
   font-weight: 600;
 }
 
+.hero_btn_first {
+  transition: all 300ms linear;
+}
+
+.hero_btn_first:hover, .hero_btn_first:focus {
+    background-color: #fff;
+    color: #db509b;
+  }
+
 .hero_btn_second {
   border-color: #db509b;
   color: #db509b;
   background-color: #fff;
+  transition: all 300ms linear;
 }
+
+.hero_btn_second:hover, .hero_btn_second:focus {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+  }
 
 .hero_list_control {
   display: flex;
@@ -1367,11 +1399,16 @@ section {
   align-items: center;
   justify-content: center;
   border: none;
+  transition: all 300ms linear;
 }
+
+.hero_control_btn:hover, .hero_control_btn:focus {
+    background-color: #fff;
+    color: #db509b;
+  }
 
 @media screen and (min-width: 1440px) {
   .hero {
-    width: 1440px;
     height: 780px;
   }
   .hero_slide_first {
@@ -1436,18 +1473,19 @@ section {
 
 .about_img_container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   overflow: hidden;
   width: 327px;
   height: 327px;
   position: relative;
   border-radius: 25px;
+  padding-left: 65px;
 }
 
 .about_image {
   height: 327px;
-  width: 327px;
+  width: 262px;
 }
 
 .about_image_part {
@@ -1490,7 +1528,13 @@ section {
   border: 1px solid #fff;
   border-radius: 30px;
   color: #fff;
+  transition: all 300ms linear;
 }
+
+.about_btn:hover, .about_btn:focus {
+    background-color: #fff;
+    color: #db509b;
+  }
 
 .absolute_back {
   height: 440px;
@@ -1538,7 +1582,13 @@ section {
   border: 1px solid #db509b;
   border-radius: 30px;
   color: #560b75;
+  transition: all 300ms linear;
 }
+
+.about_absolute_btn:hover, .about_absolute_btn:focus {
+    background-color: #c82a7a;
+    color: #fff;
+  }
 
 @media screen and (min-width: 1440px) {
   .about {
@@ -1551,10 +1601,11 @@ section {
     height: 640px;
     width: 640px;
     flex-shrink: 0;
+    padding-left: 128px;
   }
   .about_image {
     height: 640px;
-    width: 640px;
+    width: 512px;
   }
   .about_image_part {
     height: 640px;
@@ -1642,7 +1693,14 @@ section {
   color: #fff;
   font-size: 18px;
   margin-bottom: 40px;
+  transition: all 300ms linear;
 }
+
+.swiper_btn:hover, .swiper_btn:focus {
+    background-color: transparent;
+    color: #c82a7a;
+    border: 1px solid #c82a7a;
+  }
 
 .swiper_list_control {
   display: flex;
@@ -1660,6 +1718,7 @@ section {
   background-color: #fff;
   border: 1px solid #c82a7a;
   border-radius: 50%;
+  transition: all 300ms linear;
 }
 
 .swiper_control_btn > svg {
@@ -1814,6 +1873,16 @@ section {
     }
       .swiper_item .swiper_item_btn > svg {
         fill: #c82a7a;
+        transition: all 300ms linear;
+      }
+      .swiper_item .swiper_item_btn{
+      transition: all 300ms linear;
+  }
+      .swiper_item .swiper_item_btn:hover, .swiper_item .swiper_item_btn:focus {
+        background-color: #c82a7a;
+      }
+      .swiper_item .swiper_item_btn:hover svg, .swiper_item .swiper_item_btn:focus svg {
+        fill: #fff;
       }
   .active {
     background-color: #8000b3;

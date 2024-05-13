@@ -1600,9 +1600,6 @@ section {
   z-index: 1;
 }
 
-.about_image_absolute {
-}
-
 .about_absolute_subtitle {
   color: #c82a7a;
 }
@@ -1695,7 +1692,7 @@ section {
   }
 
   .about_absolute_subtitle {
-    width: 400px;
+    white-space: nowrap;
   }
   .about_absolute_title {
     font-size: 44px;

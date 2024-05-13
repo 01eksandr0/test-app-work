@@ -285,6 +285,51 @@ a {
     color: var(--cl-white);
   }
 
+@font-face {
+  font-family: 'New Order';
+  src: url('../../assets/fonts/NewOrder-SemiBold.woff2') format('woff2'),
+    url('../../assets/fonts/NewOrder-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Order';
+  src: url('../../assets/fonts/NewOrder-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/NewOrder-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Order';
+  src: url('../../assets/fonts/NewOrder-Light.woff2') format('woff2'),
+    url('../../assets/fonts/NewOrder-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Order';
+  src: url('../../assets/fonts/NewOrder-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/NewOrder-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Order';
+  src: url('../../assets/fonts/NewOrder-Medium.woff2') format('woff2'),
+    url('../../assets/fonts/NewOrder-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 .fp-watermark {
   display: none;
 }
@@ -301,7 +346,7 @@ body {
   background: #fff;
 
   color: var(--cl-black);
-  font-family: var(--font-main);
+  font-family: 'New Order';
 
   overflow-x: hidden;
 
@@ -1555,6 +1600,9 @@ section {
   z-index: 1;
 }
 
+.about_image_absolute {
+}
+
 .about_absolute_subtitle {
   color: #c82a7a;
 }
@@ -1641,9 +1689,11 @@ section {
     flex-direction: row;
     top: 850px;
   }
-  .about_absolute_content {
-    padding: 64px 64px 64px 0;
+
+  .about_image {
+    height: 602px;
   }
+
   .about_absolute_subtitle {
     width: 400px;
   }
@@ -1748,6 +1798,7 @@ section {
   .swiper_section {
     padding: 86px 0;
     background-image: url(../../assets/images/swiper/backDesk.jpg);
+    height: 1000px;
   }
   .swiper_title {
     font-size: 56px;

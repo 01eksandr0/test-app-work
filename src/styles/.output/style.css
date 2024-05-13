@@ -1850,7 +1850,11 @@ section {
     width: 369px;
     margin-right: 32px;
     background-color: #fff;
+    transition: all 300ms linear;
   }
+    .swiper_item:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     .swiper_item .swiper_item_img {
       width: 369px;
       height: 275px;
